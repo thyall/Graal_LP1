@@ -16,21 +16,22 @@ void reverse(itr first, itr last)
 //cliente
 int main()
 {
-	int A[] = {1,2,3,5,4,8,7,54,-5,3};
+	//int A[] = {1,2,3,5,4,8,7,54,-5,3}; funcionado para os dois vetores
+	double B[] = {2.5, 3.4, 4.8, 8.8,-3.2, -1.5, 10.89, 7.8, 5.5,45.8};
 
 	std::cout<< "Antes: ";	
 	for(int i = 0; i < 10; ++i)
 	{
-		std::cout << A[i] << " ";
+		std::cout << B[i] << " ";
 	}
 	std::cout << std::endl;
 
-	reverse(std::begin(A), std::end(A));
+	reverse(std::begin(B), std::end(B));
 
 	std::cout<< "Depois: ";	
 	for(int i = 0; i < 10; ++i)
 	{
-		std::cout << A[i] << " ";
+		std::cout << B[i] << " ";
 	}
 	std::cout << std::endl;
 	
