@@ -1,4 +1,4 @@
-# Template
+# GRAAL
 
 ## 1 Introduction
 In this exercise you should develop a series of functions that represent typical algorithms for
