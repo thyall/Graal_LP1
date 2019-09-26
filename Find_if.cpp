@@ -11,18 +11,16 @@ Itr find_if(Itr first , Itr last , Predicate p)
 		first++;
 	}
 
-	return last;
+	return last;//if the value is noy found in the range, the function returns last
 }
 
 
 
 
 
-
-
-bool p(const int &a){return a < -1;} // por exemplo esse predicado retorna true se tiver lagum valor negativo
-
 //cliente
+//esse predicado pode ser variado por ex "return a%2 == 0" -- > aqui ele retorna o proiemiro par
+bool p(const int &a){return a < 0;} // por exemplo esse predicado retorna true se tiver algum valor negativo
 
 int main(int argc, char const *argv[])
 {

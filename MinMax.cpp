@@ -21,10 +21,7 @@ std::pair<itr,itr> minmax(itr first, itr last, Compare cmp)
 	return std::make_pair(min,max);//retornando os vlores min e max
 }
 
-bool cmp(const int &a, const int &b)// funcao de comparação
-{
-	return a < b;
-}
+bool cmp(const int &a, const int &b){return a < b;}// função de comparação
 
 
 //cliente
