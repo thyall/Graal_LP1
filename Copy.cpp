@@ -9,7 +9,6 @@ itr copy(itr first, itr last, itr d_first)
 		first++;
 		d_first++;
 	}
-
 	return d_first;
 }
 
@@ -29,7 +28,10 @@ int main(int argc, char const *argv[])
 	}
 	std::cout << std::endl;
 
-	auto last = copy(std::begin(B), std::end(B), std::begin(C));
+	//aqui comentado temos o retorno da função que pode ser utilizado pelo cliente e não necessariamente é obrigado usar
+	// por emxemplo a função "printf" em C também retorna um valor, mas não necessariamente é preciso utilizar./e
+	//auto last = copy(std::begin(B), std::end(B), std::begin(C));
+	copy(std::begin(B), std::end(B), std::begin(C));
 
 	for(int i = 0; i < 10; ++i)
 	{

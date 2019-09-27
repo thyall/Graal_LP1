@@ -12,15 +12,16 @@ Itr find(Itr first , Itr last , const T &value, Equal eq)
 		first++;
 	}
 
-	return last;//if the value is noy found in the range, the function returns last
+	return last;//se o valor da função não for achado no range a função retornar last
 }
 
 
-bool eq(const int &a, const int &b){return a == b;} 
+
 
 
 
 //cliente
+bool eq(const int &a, const int &b){return a == b;} 
 int main(int argc, char const *argv[])
 {
 	int A[] = {1,2,3,5,4,8,7,54,-5,3};

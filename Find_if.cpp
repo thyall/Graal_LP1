@@ -11,7 +11,7 @@ Itr find_if(Itr first , Itr last , Predicate p)
 		first++;
 	}
 
-	return last;//if the value is noy found in the range, the function returns last
+	return last;//se o valor da função não for achado no range a função retornar last
 }
 
 

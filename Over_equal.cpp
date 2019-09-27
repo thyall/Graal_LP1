@@ -25,7 +25,7 @@ bool equal (itr first, itr last, itr first2, itr last2, Equal eq)
 	while(first != last)// a loço serve para procurar se os ranges diferem
 	{ 
 		// segue mesma logica das funções anteriores
-		if(!eq(*first, *first2))// se a função eq retornar true é negado pelo "!"e não retorna false, se ela for false, ou seja, valores diferentes o if fica valido (True) e a função retorna false
+		if(!eq(*first, *first2))// se a função eq retornar true é negado pelo "!"e não retorna o false dentro do if, se ela for false, ou seja, valores diferentes o if fica valido (True) e a função retorna false
 			return false;
 		else
 		{
