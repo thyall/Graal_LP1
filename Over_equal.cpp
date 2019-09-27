@@ -41,7 +41,7 @@ bool equal (itr first, itr last, itr first2, itr last2, Equal eq)
 //cliente
 bool eq(const int &a, const int &b){return a == b;} 
 
-int main(int argc, char const *argv[])
+int main()
 {
 	int A[] = {1,2,3,5,4,8,7,54,-5,3};
 	int B[] = {1,2,3,5,4,8,7,54,-5,3};//vetor B igual a A

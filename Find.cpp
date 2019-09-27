@@ -22,7 +22,7 @@ Itr find(Itr first , Itr last , const T &value, Equal eq)
 
 //cliente
 bool eq(const int &a, const int &b){return a == b;} 
-int main(int argc, char const *argv[])
+int main()
 {
 	int A[] = {1,2,3,5,4,8,7,54,-5,3};
 
