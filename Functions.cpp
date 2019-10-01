@@ -149,3 +149,51 @@ bool equal(itr first, itr last, itr first2, Equal eq)
 	}
 	return true;//se as funções não forem diferentes retorna true
 }
+
+//---------------------------------------------------------------------------------//
+
+template <typename itr, typename Equal>
+bool equal (itr first, itr last, itr first2, itr last2, Equal eq)
+{
+	auto x = last - first;
+	auto y = last2 - first2;
+
+	if(x != y)
+		return false;
+
+	while(first != last)// a loço serve para procurar se os ranges diferem
+	{ 
+		// segue mesma logica das funções anteriores
+		if(!eq(*first, *first2))// se a função eq retornar true é negado pelo "!"e não retorna o false dentro do if, se ela for false, ou seja, valores diferentes o if fica valido (True) e a função retorna false
+			return false;
+		else
+		{
+			first++;
+			first2++;//percorrendo ambos ranges
+		}
+	}
+	return true;//se as funções não forem diferentes retorna true
+}
+
+//---------------------------------------------------------------------------------//
+
+template <typename itr, typename p>
+itr partition(itr first, itr last, p pred)
+{
+	auto x = --last;//last aponta para frnete do do ultimo lugar mas queremos o ultimo valor 
+
+	while (first!=last)//laço para percorrer o vetor
+	{
+		while(!pred(*x))//se não satisfazer o predica ele irá retornar first se for igual a 'x' ou seja chegar no inicio
+		{// e também ira decrescer o 'x' que no momento aponta para o ultimo valor
+			if(first==x)
+				return first;//função retornando first apontando para o primeiro valor pós partição
+			x--;
+		}
+
+		std::swap(*first, *x);// se o predicado retornar true no while, a funçao vem pra essa linha e troca os valores
+		first++;// e acrescenta o first para continuar o laço
+	}  	
+	return first;//função retornando first apontando para o primeiro valor pós partição
+}
+

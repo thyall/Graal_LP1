@@ -17,11 +17,15 @@ bool equal(itr first, itr last, itr first2, Equal eq)
 	return true;//se as funções não forem diferentes retorna true
 }
 
-////---------------> tentando entender a logica do outra para diferenciar ambas e ter o overload<-------------
-
 template <typename itr, typename Equal>
 bool equal (itr first, itr last, itr first2, itr last2, Equal eq)
 {
+	auto x = last - first;
+	auto y = last2 - first2;
+
+	if(x != y)
+		return false;
+
 	while(first != last)// a loço serve para procurar se os ranges diferem
 	{ 
 		// segue mesma logica das funções anteriores
@@ -36,8 +40,6 @@ bool equal (itr first, itr last, itr first2, itr last2, Equal eq)
 	return true;//se as funções não forem diferentes retorna true
 }
 
-////---------------> tentando entender a logica do outra para diferenciar ambas e ter o overload<-------------
-
 //cliente
 bool eq(const int &a, const int &b){return a == b;} 
 
@@ -51,8 +53,14 @@ int main()
 
 	auto ret2 = equal(std::begin(A), std::end(A), std::begin(C), eq);
 
-	std::cout << "Por convensão o programa retorna 1 para True e 0 para False:" << std::endl;
-	std::cout << "Vetor A e B: " << ret << std::endl << "Vetor A e C: " << ret2 << std::endl;
+	auto ret3 = equal(std::begin(A), std::end(A), std::begin(B), std::end(B), eq);
+
+	auto ret4 = equal(std::begin(A), std::end(A), std::begin(C), std::end(C), eq);
+
+
+	std::cout << std::boolalpha << "Vetor A e B: " << ret << std::endl << "Vetor A e C: " << ret2 << std::endl;
+	std::cout << std:: boolalpha <<  "Vetor A e B: " << ret3 << std::endl << "Vetor A e C: " << ret4 << std::endl;
+
 	
 	return 0;
 }
