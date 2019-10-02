@@ -31,8 +31,6 @@ int main(int argc, char const *argv[])
 
 	std::cout << "Por convensão o programa retorna 1 para True e 0 para False:" << std::endl;
 
-	//partition(std::begin(A), std::end(A), p);
-
 	auto a = partition(std::begin(A), std::end(A), p);
 
 	//std::swap(A[2], A[5]);

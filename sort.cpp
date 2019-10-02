@@ -28,7 +28,7 @@ int main()
 	  std::cout << A[i] << " ";
 	}std::cout << std::endl;
 
-	auto a = sort(std::begin(A), std::begin(A)+4);
+	auto a = sort(std::begin(A), std::begin(A)+4, );
 
 	std::cout << "Depois:" << std::endl;
 	while(a != a+4)
